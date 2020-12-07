@@ -1,10 +1,7 @@
-# To install source this file from your .zshrc file
+# ZSH Git Prompt Plugin from:
+# # http://github.com/olivierverdier/zsh-git-prompt
 
-# see documentation at http://linux.die.net/man/1/zshexpn
-# A: finds the absolute path, even if this is symlinked
-# h: equivalent to dirname
 export __GIT_PROMPT_DIR=${0:A:h}
-
 export GIT_PROMPT_EXECUTABLE=${GIT_PROMPT_EXECUTABLE:-"python"}
 
 # Initialize colors.
