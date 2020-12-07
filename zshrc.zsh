@@ -11,30 +11,12 @@ colors
 # Allow for functions in the prompt.
 setopt PROMPT_SUBST
 
-autoload -U add-zsh-hook
-
-add-zsh-hook chpwd chpwd_update_git_vars
-add-zsh-hook preexec preexec_update_git_vars
-add-zsh-hook precmd precmd_update_git_vars
-
 ## Function definitions
-function preexec_update_git_vars() {
-    case "$2" in
-        git*|hub*|gh*|stg*)
-        __EXECUTED_GIT_COMMAND=1
-        ;;
-    esac
-}
-
 function precmd_update_git_vars() {
     if [ -n "$__EXECUTED_GIT_COMMAND" ] || [ ! -n "$ZSH_THEME_GIT_PROMPT_CACHE" ]; then
         update_current_git_vars
         unset __EXECUTED_GIT_COMMAND
     fi
-}
-
-function chpwd_update_git_vars() {
-    update_current_git_vars
 }
 
 function update_current_git_vars() {
