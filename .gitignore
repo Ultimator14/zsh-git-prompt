@@ -1,1 +1,4 @@
 src/.bin
+.stack-work/
+src/.stack-work/
+stack.yaml.lock
