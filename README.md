@@ -81,6 +81,14 @@ There is now a Haskell implementation as well, which can be four to six times fa
 4.  Define the variable `GIT_PROMPT_EXECUTABLE="haskell"` somewhere in
     your `.zshrc`
 
+### Haskell (alternatively with cabal)
+
+1. `cd src`
+2. `cabal v1-sandbox init`
+3. `cabal v1-install`
+4. `cd ..`
+5. `mv src/.cabal-sandbox/bin/gitstatus src/.bin/`
+
 ## Customisation
 
 - You may redefine the function `git_super_status` (after the `source` statement) to adapt it to your needs (to change the order in which the information is displayed).

@@ -1,4 +1,9 @@
+# Stack
 src/.bin
 .stack-work/
 src/.stack-work/
 stack.yaml.lock
+# Cabal
+src/.cabal-sandbox/
+src/cabal.sandbox.config
+src/dist/
